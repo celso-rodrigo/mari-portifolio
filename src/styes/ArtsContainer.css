@@ -1,0 +1,32 @@
+.arts-main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid pink;
+  padding: 20px;
+  height: 550px;
+}
+
+.arts-main-container h2 {
+  font-size: 3rem;
+}
+
+.arts-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.art-card {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+}
+
+.art-card img {
+  width: 200px;
+}
