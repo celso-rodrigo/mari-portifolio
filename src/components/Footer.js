@@ -2,28 +2,30 @@ import React from "react";
 import instagram from "../images/instagram.svg";
 import twitter from "../images/twitter.svg";
 import email from "../images/email.svg";
-import "../styes/Contact.css";
+import "../styes/Footer.css";
 
-function Contact() {
+function Footer() {
   return (
-    <section className="contact-container">
-      <h2>Contato:</h2>
+    <footer className="footer-container">
       <div className="contact-link-container">
         <a href="#" target="blank" className="contact-link">
           <img src={ instagram } alt="Ir para Instagram do artista" />
-          <h3>Instagram</h3>
         </a>
         <a href="#" target="blank" className="contact-link">
           <img src={ twitter } alt="Ir para Twitter do artista" />
-          <h3>Twitter</h3>
         </a>
         <a href="#" target="blank" className="contact-link">
           <img src={ email } alt="Mandar email para o artista" />
-          <h3>Email</h3>
         </a>
       </div>
-    </section>
+      <footer>
+        <p>
+          {"Feito por "}
+          <a href="https://github.com/celso-rodrigo" target="blank">Celso Rodrigo</a>
+        </p>
+      </footer>
+    </footer>
   );
 } 
 
-export default Contact;
+export default Footer;

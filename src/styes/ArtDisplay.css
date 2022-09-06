@@ -1,0 +1,49 @@
+.display-false {
+  display: none;
+  background-color: red;
+}
+
+.art-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+}
+
+.art-container {
+  display: flex;
+}
+
+.art-container button {
+  padding: 0 20px;
+  border: none;
+  background-color: transparent;
+  filter: grayscale(100%) invert();
+}
+
+.prev-btn img {
+  transform: rotate(180deg);
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 120px;
+  height: 120px;
+  background-color: transparent;
+  border: none;
+}
+
+.close-btn img {
+  width: 120px;
+  filter: grayscale(100%) invert();
+}

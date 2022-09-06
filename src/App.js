@@ -1,26 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styes/global.css";
 import Header from "./components/Header";
 import About from "./components/About";
 import ArtsContainer from "./components/ArtsContainer";
-import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import ArtDisplay from "./components/ArtDisplay";
+import Context from "./context/Context";
 
 function App() {
+  const { display } = useContext(Context);
   return (
-    <div className="wrapper">
-      <Header />
-      <div className="main-content">
-        <About />
-        <ArtsContainer />
-        <Contact />
-        <footer>
-          <p>
-            {"Feito por "}
-            <a href="https://github.com/celso-rodrigo" target="blank">Celso Rodrigo</a>
-          </p>
-        </footer>
+    <>
+      <div className="wrapper" >
+        <Header />
+        <div className="main-content">
+          <About />
+          <ArtsContainer />
+          <Footer />
+        </div>
       </div>
-    </div>
+      { display && <ArtDisplay /> }
+    </>
   );
 } 
 

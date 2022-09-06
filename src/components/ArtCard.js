@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import tempArt from "../images/tempArt.jpg";
+import Context from "../context/Context";
 
 function ArtCard() {
+  const { displayArt } = useContext(Context);
   return (
-    <div className="art-card">
+    <button className="art-card" onClick={displayArt}>
       <img src={tempArt} alt="Arte" />
-    </div>
+    </button>
   );
-} 
+}
 
 export default ArtCard;

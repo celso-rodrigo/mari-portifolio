@@ -1,5 +1,6 @@
 .about-section {
   border-top: 1px solid pink;
+  background-color: white;
   padding: 20px;
   display: flex;
   gap: 50px;
@@ -8,6 +9,7 @@
 
 .about-section img {
   width: 500px;
+  animation: pendulum 2s infinite alternate-reverse;
 }
 
 .about-info {
@@ -16,4 +18,21 @@
   justify-content: space-evenly;
   text-align: center;
   max-width: 30%;
+}
+
+@keyframes pendulum { 
+  100% { 
+    transform:rotate(5deg); 
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }  
+
+  .about-info {
+    max-width: 80%;
+  }
 }

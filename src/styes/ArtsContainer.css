@@ -4,8 +4,9 @@
   flex-direction: column;
   gap: 20px;
   border-top: 1px solid pink;
+  background-color: white;
   padding: 20px;
-  height: 550px;
+  min-height: 380px;
 }
 
 .arts-main-container h2 {
@@ -15,18 +16,29 @@
 .arts-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .art-card {
+  background-color: white;
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  width: 200px;
-  height: 200px;
+  width: 260px;
+  height: 260px;
+  transition: 0.7s;
+}
+
+.art-card:hover {
+  height: 270px;
+  width: 270px;
+}
+
+.art-card:hover img {
+  width: 250px;
 }
 
 .art-card img {
-  width: 200px;
+  width: 240px;
+  transition: 0.7s;
 }

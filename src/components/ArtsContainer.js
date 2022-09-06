@@ -13,14 +13,6 @@ function ArtsContainer() {
         <ArtCard />
         <ArtCard />
         <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
-        <ArtCard />
       </div>
     </section>
   );
