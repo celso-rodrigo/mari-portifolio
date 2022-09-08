@@ -46,10 +46,11 @@
 }
 
 .art-card:hover img {
-  width: 250px;
+  scale: 1.05;
 }
 
 .art-card img {
-  width: 240px;
+  max-width: 240px;
+  max-height: 240px;
   transition: 0.3s;
 }
