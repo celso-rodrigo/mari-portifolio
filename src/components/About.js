@@ -4,8 +4,8 @@ import "../styes/About.css";
 
 function About() {
   return (
-    <section className="about-section">
-      <img src={about} alt="Desenho chibi da artista"/>
+    <section className="about-section" data-aos="fade-up" data-aos-duration="1100">
+      <img src={about} alt="Desenho chibi da artista" />
       <div className="about-info">
         <h1>Sobre mim</h1>
         <p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>

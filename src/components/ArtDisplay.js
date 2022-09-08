@@ -1,12 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import close from "../images/close.svg";
 import arrow from "../images/arrow.svg";
-import tempArt from "../images/tempArt.jpg";
 import "../styes/ArtDisplay.css";
 import Context from "../context/Context";
 
 function ArtDisplay() {
-  const { displayArt } = useContext(Context);
+  const { displayArt, artToDisplay, changeDisplayedArt } = useContext(Context);
 
   useEffect(() => {
     const handleKeyPress = ({key}) => {
@@ -17,19 +16,22 @@ function ArtDisplay() {
   }, []);
 
   return (
-    <div className="art-display" >
+    <div className="art-display">
       <button
         className="close-btn" 
         onClick={displayArt}
       >
         <img src={close} alt="Close button" />
       </button>
+
       <div className="art-container">
-        <button className="prev-btn">
+        <button className="prev-btn" onClick={() => changeDisplayedArt(-1)}>
           <img src={arrow} alt="Arte anterior" />
         </button>
-        <img src={tempArt} alt="Close button" />
-        <button className="next-btn">
+
+        <img src={artToDisplay} alt="Arte" className="displayed-art" />
+
+        <button className="next-btn" onClick={() => changeDisplayedArt(1)}>
           <img src={arrow} alt="Próxima arte" />
         </button>
       </div>

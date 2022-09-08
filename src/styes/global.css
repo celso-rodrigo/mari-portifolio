@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap");
 
 :root {
-  /* --color-1: #000000;
-  
-  --color-2: #000000;
-  
-  --color-3: #000000;
-  
-  --color-4: #000000; */
+  --color-1: #d65c79;
+  --color-2: #dc748c;
+  --color-3: #ffc1d0;
 
   --font-1: Raleway, sans-serif;
 }
@@ -18,47 +14,67 @@
   font-family: var(--font-1);
 }
 
-.wrapper {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  perspective: 10px;
-  background-image: url("../images//bg.png");
+h1 {
+  color: var(--color-1);
+  font-size: 2.5rem;
 }
 
 .main-header {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-
-.background,
-.foreground {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.background {
-  transform: translateZ(-10px) scale(2);
-}
-
-.foreground {
-  transform: translateZ(-5px) scale(1.5);
+  height: 400px;
+  background-image: url("../images/headerBg.png");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
 }
 
 .logo {
-  height: 300px;
+  filter: grayscale(100%) invert();
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/ass.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
 }
 
 .main-content {
-  background-color: white;
   width: 100%;
   height: 100%;
+}
+
+.contact-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 90%;
+  gap: 60px;
+  padding: 10px 0 40px 0;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  width: 60px;
+}
+
+.contact-link img {
+  transition: 0.3s;
+  width: 50px;
+  filter: grayscale(100%) invert();
+}
+
+.contact-link img:hover {
+  width: 60px;
+}
+
+@media screen and (max-width: 540px) {
+  .logo {
+    background-size: cover;
+    scale: 0.8;
+  }
 }

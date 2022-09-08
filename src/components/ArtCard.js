@@ -5,9 +5,11 @@ import Context from "../context/Context";
 function ArtCard({url}) {
   const { displayArt } = useContext(Context);
   return (
-    <button className="art-card" onClick={displayArt}>
-      <img src={url} alt="Arte" />
-    </button>
+    <div  className="art-card">
+      <button onClick={() => displayArt(url)}>
+        <img src={url} alt="Arte" />
+      </button>
+    </div>
   );
 }
 
