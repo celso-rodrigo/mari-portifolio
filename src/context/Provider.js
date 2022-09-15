@@ -28,7 +28,7 @@ function Provider({ children }) {
 
   useEffect(() => {
     const saveImgsUrl = () => {
-      let numberOfArts = 10;
+      let numberOfArts = 11;
       let allUrls = [];
       for(let index = 1; index <= numberOfArts; index++) {
         allUrls.push(artUrl(`art${index}.png`));

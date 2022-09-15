@@ -3,11 +3,12 @@
   display: flex;
   gap: 50px;
   justify-content: center;
+  align-items: center;
 }
 
 .about-section img {
   width: 500px;
-  animation: pendulum 2s infinite alternate-reverse;
+  animation: about-anim 2s infinite alternate-reverse;
 }
 
 .about-info {
@@ -18,24 +19,31 @@
   max-width: 30%;
 }
 
-@keyframes pendulum { 
-  100% { 
-    transform:rotate(5deg); 
+@keyframes about-anim {
+  100% {
+    transform: rotate(5deg) translateY(5px);
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .about-section {
     flex-direction: column;
     align-items: center;
-  }  
+    gap: 0;
+  }
 
   .about-section img {
-    width: 300px;
+    max-width: 100%;
   }
 
   .about-info {
     max-width: 80%;
     padding-bottom: 50px;
+    gap: 20px;
+  }
+
+  .about-info h1 {
+    padding-bottom: 30px;
+    font-size: 3rem;
   }
 }
